@@ -6,8 +6,10 @@ Model.prototype.get = function(property){
   return this.options[property];
 }
 
-Model.prototype.set = function(key, value){
-  this.options[key] = value;
+Model.prototype.set = function(options){
+  var key = Object.keys(options)[0];
+  this.options[key] = options[key];
+  debugger
 }
 
 function make$Element(options){
